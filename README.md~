@@ -17,7 +17,8 @@ Students
 -- send/read messages
 
 
-Model
+- interface for tracking likely students 
+    (that is, every child on earth under age...8?)
 -- age
 -- competativeness
 -- agression
