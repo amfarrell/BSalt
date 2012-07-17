@@ -1,0 +1,18 @@
+<h1>Listing political_entities</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @political_entities.each do |political_entity| %>
+  <tr>
+    <td><%= link_to 'Show', political_entity %></td>
+    <td><%= link_to 'Edit', edit_political_entity_path(political_entity) %></td>
+    <td><%= link_to 'Destroy', political_entity, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New political_entity', new_political_entity_path %>

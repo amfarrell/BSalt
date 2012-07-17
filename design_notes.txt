@@ -21,8 +21,12 @@ Students
 
 Model
 Prospect: a potential recruit. That is, any child younger than... 8?
--- age
 factors which determine suitability
+born_on: datetime
+born_at: text
+name: text
+lives_at: text
+-- birthplace
 -- competativeness
 -- agression
 -- creativity
@@ -30,9 +34,14 @@ factors which determine suitability
 -- nationality (country code)
 -- alternate loyalty (nullable string)
 -- notes
--- birthplace
 -- name
 -- parents/guardian names
+Guardian:
+name
+lives_at
+born_at
+loyalty
+children
 Student: a current student of battle school. the above, plus
 -- relationships with other students
 -- platoon membership (or launchie)
