@@ -1,0 +1,36 @@
+<h1>Listing cadets</h1>
+
+<table>
+  <tr>
+    <th>Platoon</th>
+    <th>Student id number</th>
+    <th>Birthdatetime</th>
+    <th>Rank</th>
+    <th>Birthlocation</th>
+    <th>Name</th>
+    <th>Bunk</th>
+    <th>Height</th>
+    <th>Weight</th>
+  </tr>
+
+<% @cadets.each do |cadet| %>
+  <tr>
+    <td><%=h cadet.platoon_id %></td>
+    <td><%=h cadet.student_id_number %></td>
+    <td><%=h cadet.birthdatetime %></td>
+    <td><%=h cadet.rank %></td>
+    <td><%=h cadet.birthlocation %></td>
+    <td><%=h cadet.name %></td>
+    <td><%=h cadet.bunk %></td>
+    <td><%=h cadet.height %></td>
+    <td><%=h cadet.weight %></td>
+    <td><%= link_to 'Show', cadet %></td>
+    <td><%= link_to 'Edit', edit_cadet_path(cadet) %></td>
+    <td><%= link_to 'Destroy', cadet, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cadet', new_cadet_path %>

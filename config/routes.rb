@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :platoons
+
+  map.resources :cadets
+
   map.resources :political_entities
 
   map.resources :children

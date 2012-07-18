@@ -1,0 +1,48 @@
+<h1>Editing cadet</h1>
+
+<% form_for(@cadet) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :platoon_id %><br />
+    <%= f.text_field :platoon_id %>
+  </p>
+  <p>
+    <%= f.label :student_id_number %><br />
+    <%= f.text_field :student_id_number %>
+  </p>
+  <p>
+    <%= f.label :birthdatetime %><br />
+    <%= f.datetime_select :birthdatetime %>
+  </p>
+  <p>
+    <%= f.label :rank %><br />
+    <%= f.text_area :rank %>
+  </p>
+  <p>
+    <%= f.label :birthlocation %><br />
+    <%= f.text_area :birthlocation %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.label :bunk %><br />
+    <%= f.text_area :bunk %>
+  </p>
+  <p>
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @cadet %> |
+<%= link_to 'Back', cadets_path %>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  platoon_id: 1
+  student_id_number: MyString
+  birthdatetime: 2012-07-18 15:56:40
+  rank: MyText
+  birthlocation: MyText
+  name: MyText
+  bunk: MyText
+  height: 1
+  weight: 1
+
+two:
+  platoon_id: 1
+  student_id_number: MyString
+  birthdatetime: 2012-07-18 15:56:40
+  rank: MyText
+  birthlocation: MyText
+  name: MyText
+  bunk: MyText
+  height: 1
+  weight: 1

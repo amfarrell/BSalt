@@ -1,0 +1,28 @@
+<p>
+  <b>Major color:</b>
+  <%=h @platoon.major_color %>
+</p>
+
+<p>
+  <b>Minor color:</b>
+  <%=h @platoon.minor_color %>
+</p>
+
+<p>
+  <b>Barracks:</b>
+  <%=h @platoon.barracks %>
+</p>
+
+<p>
+  <b>Commander:</b>
+  <%=h @platoon.commander_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @platoon.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_platoon_path(@platoon) %> |
+<%= link_to 'Back', platoons_path %>

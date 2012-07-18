@@ -5,3 +5,6 @@
 #   
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
+require "models/cadet.rb"
+require "models/platoon.rb"
+Cadet.create(:rank => "cadet captain", :name => "Bonzo Madrid", :student_id_number => "13-0303", :bunk => "06-100", :birthdatetime =>  

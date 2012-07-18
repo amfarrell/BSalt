@@ -1,0 +1,32 @@
+<h1>Editing platoon</h1>
+
+<% form_for(@platoon) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :major_color %><br />
+    <%= f.text_area :major_color %>
+  </p>
+  <p>
+    <%= f.label :minor_color %><br />
+    <%= f.text_area :minor_color %>
+  </p>
+  <p>
+    <%= f.label :barracks %><br />
+    <%= f.text_area :barracks %>
+  </p>
+  <p>
+    <%= f.label :commander_id %><br />
+    <%= f.text_field :commander_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @platoon %> |
+<%= link_to 'Back', platoons_path %>

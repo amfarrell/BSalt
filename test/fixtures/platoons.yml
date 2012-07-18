@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  major_color: MyText
+  minor_color: MyText
+  barracks: MyText
+  commander_id: 1
+  name: MyText
+
+two:
+  major_color: MyText
+  minor_color: MyText
+  barracks: MyText
+  commander_id: 1
+  name: MyText
