@@ -1,6 +1,6 @@
 class Platoon < ActiveRecord::Base
-  belongs_to :commander
-  validates_presense_of :commander
-  validates_uniqueness_of :commander
+  validates_presence_of :barracks
+  validates_presence_of :major_color
+  has_many :cadets
 
 end

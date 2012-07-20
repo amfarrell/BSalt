@@ -1,0 +1,13 @@
+.after-cadet-slot {
+  height : 3px;
+}
+.after-cadet-slot-hovering {
+  background-color: #fdd;
+}
+.cadet {
+  list-style-type :none;
+  margin-left : 0px;
+  border-style : solid;
+  border-width : 1px;
+  border-color : #999;
+}

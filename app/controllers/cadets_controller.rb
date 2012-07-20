@@ -57,9 +57,10 @@ class CadetsController < ApplicationController
   # PUT /cadets/1.xml
   def update
     @cadet = Cadet.find(params[:id])
-
+    @cadet.platoon_id = params[:platoon_id] #XXX I need to sanitize this.
     respond_to do |format|
       if @cadet.update_attributes(params[:cadet])
+        puts @cadet.platoon
         format.html { redirect_to(@cadet, :notice => 'Cadet was successfully updated.') }
         format.xml  { head :ok }
       else
@@ -67,6 +68,7 @@ class CadetsController < ApplicationController
         format.xml  { render :xml => @cadet.errors, :status => :unprocessable_entity }
       end
     end
+    #This isn't responding and I don't know what respond_to does.
   end
 
   # DELETE /cadets/1

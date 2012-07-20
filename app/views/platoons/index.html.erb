@@ -1,28 +1,38 @@
+<% content_for :javascripts do %>
+  <%= javascript_include_tag "jquery-ui-1.8.21.custom.min.js" %>
+  <%= javascript_include_tag "drag-cadets.js" %>
+<% end %>
+
+<div >
 <h1>Listing platoons</h1>
 
-<table>
-  <tr>
-    <th>Major color</th>
-    <th>Minor color</th>
-    <th>Barracks</th>
-    <th>Commander</th>
-    <th>Name</th>
-  </tr>
-
+<% count = -1 %>
 <% @platoons.each do |platoon| %>
-  <tr>
-    <td><%=h platoon.major_color %></td>
-    <td><%=h platoon.minor_color %></td>
-    <td><%=h platoon.barracks %></td>
-    <td><%=h platoon.commander_id %></td>
-    <td><%=h platoon.name %></td>
-    <td><%= link_to 'Show', platoon %></td>
-    <td><%= link_to 'Edit', edit_platoon_path(platoon) %></td>
-    <td><%= link_to 'Destroy', platoon, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+  <% count += 1 %>
+  <% if count % 4 == 0 %>
+    <div class="container_12">
+  <% end %>
+  <div id="platoonbox_<%= platoon.id %>" class="platoon grid_3 <%= {0 => 'alpha', 3 => 'omega'}[count % 4] %>" >
+    <div>
+      <%=h platoon.name %>: barracks <%=h platoon.barracks %>
+    </div>
+    <div>
+      <ul class="cadetlist" id="platoon_<%= platoon.id %>">
+      <% platoon.cadets.each do |cadet| %>
+        <li class="ui-content-widget cadet" id="cadet_<%= cadet.id %>"><%=h cadet.name %></li>
+      <% end %>
+    </div>
+  </div>
+  <% if count % 4 == 3 %>
+    </div>
+    <br />
+  <% end %>
 <% end %>
-</table>
+<% if count  % 4 != 3 %>
+  </div>
+<% end %>
 
 <br />
 
 <%= link_to 'New platoon', new_platoon_path %>
+</div>
